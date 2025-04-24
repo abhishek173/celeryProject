@@ -11,11 +11,15 @@
   <li><a href="{% url 'about' %}"> About </a> </li>
   <li><a href="{% url 'contact' %}"> Contact </a> </li>
 
-<h1> Home Page.. </h1>
+<h1> Result Page.. </h1>
 <hr>
-<p> Task ID : {{result.id}} </p>
-{% if result.id %}
-<a href="{% url 'check_result' result.id %}"> Check Task Result </a>
+{% if result %}
+<h5> Task ID : {{result.id}} </h5>
+<h5> Task ID : {{result.task_id}} </h5>
+<h5> Task State : {{result.state}} </h5>
+<h5> Task Status : {{result.status}} </h5>
+<h5> Result Value : {{result.result}} </h5>
 {% endif %}
+
 </body>
 </html>
